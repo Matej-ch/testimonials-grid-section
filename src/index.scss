@@ -1,47 +1,63 @@
 :root {
-  font-family: 'Barlow Semi Condensed', sans-serif;
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 400;
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+
+  --fw-regular: 500;
+  --fw-bold: 600;
+
+  --ff-base: 'Barlow Semi Condensed', sans-serif;
+
+  --fs-base: 16px;
+  --fs-paragraph: 13px;
+  --fs-large: 1.25rem;
+
+  --cc-primary-violet: hsl(263, 55%, 52%);
+  --cc-primary-gray-blue: hsl(217, 19%, 35%);
+  --cc-primary-dark-blue: hsl(219, 29%, 14%);
+  --cc-primary-white: hsl(0, 0%, 100%);
+
+  --cc-neutral-gray: hsl(0, 0%, 81%);
+  --cc-neutral-gray-blue: hsl(0, 0%, 81%);
+
 }
 
 *, *::before, *::after {
   box-sizing: border-box;
 }
+
 * {
   margin: 0;
 }
-html, body {
-  height: 100%;
-}
+
 body {
   font-family: var(--ff-base);
   font-weight: var(--fw-regular);
   font-size: var(--fs-base);
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
-  background-color: var(--cream);
-
+  background-color: var(--cc-neutral-gray-blue);
+  min-height: 100vh;
   display: grid;
   place-content: center;
   margin: 1rem;
 }
+
 img, picture, video, canvas, svg {
   display: block;
   max-width: 100%;
 }
+
 input, button, textarea, select {
   font: inherit;
 }
+
 p, h1, h2, h3, h4, h5, h6 {
   overflow-wrap: break-word;
 }
+
 #root, #__next {
   isolation: isolate;
 }
