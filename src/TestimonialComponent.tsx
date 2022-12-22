@@ -1,8 +1,12 @@
 import ITestimonial from "./ITestimonial";
 import './TestimonialComponent.scss';
 
-function TestimonialComponent({item}: { item: ITestimonial }) {
-    return (<article className={item.hasQuote ? 'testimonial bc-quote' : 'testimonial'}>
+function TestimonialComponent({item, isWide}: { item: ITestimonial, isWide: boolean }) {
+
+    const wideClass = isWide ? 'col-span-2' : ''
+    const bcQuoteClass = item.hasQuote ? 'bc-quote' : ''
+    
+    return (<article className={`testimonial ${wideClass} ${bcQuoteClass}`}>
         <div className="flex">
             <div>
                 <img src={item.img} alt={item.name}/>

@@ -2,6 +2,7 @@
 
   padding: 2rem;
   border-radius: 8px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 
   .name, .body, .position {
     color: var(--cc-primary-white);
@@ -66,14 +67,10 @@
   }
 }
 
-.bc-quote {
-  background-image: url("./assets/bg-pattern-quotation.svg");
-  background-repeat: no-repeat;
-  background-position: top right 10%;
-}
-
-.flex {
-  display: flex;
-  gap: 2rem;
-  padding-bottom: 1.5rem;
+@media screen and (min-width: 800px) {
+  .testimonial:last-child {
+    grid-column: 4;
+    grid-row-start: 1;
+    grid-row-end: span 2;
+  }
 }
